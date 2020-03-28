@@ -58,16 +58,40 @@
 		19EC4FAA242FAB5A001AB151 /* Car Inventory */ = {
 			isa = PBXGroup;
 			children = (
+				19EC4FC2242FB9CF001AB151 /* Model */,
+				19EC4FC4242FB9F2001AB151 /* View */,
+				19EC4FC3242FB9DD001AB151 /* Controller */,
 				19EC4FAB242FAB5A001AB151 /* AppDelegate.swift */,
 				19EC4FAD242FAB5A001AB151 /* SceneDelegate.swift */,
-				19EC4FAF242FAB5A001AB151 /* ViewController.swift */,
-				19EC4FB1242FAB5A001AB151 /* Main.storyboard */,
 				19EC4FB7242FAB5C001AB151 /* Assets.xcassets */,
 				19EC4FB9242FAB5C001AB151 /* LaunchScreen.storyboard */,
 				19EC4FBC242FAB5C001AB151 /* Info.plist */,
 				19EC4FB4242FAB5A001AB151 /* Car_Inventory.xcdatamodeld */,
 			);
 			path = "Car Inventory";
+			sourceTree = "<group>";
+		};
+		19EC4FC2242FB9CF001AB151 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19EC4FC3242FB9DD001AB151 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19EC4FAF242FAB5A001AB151 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		19EC4FC4242FB9F2001AB151 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				19EC4FB1242FAB5A001AB151 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
