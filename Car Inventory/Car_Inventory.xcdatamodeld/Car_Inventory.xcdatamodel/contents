@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19A602" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="CarEntity" representedClassName="CarEntity" syncable="YES" codeGenerationType="class"/>
-    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class"/>
+    <entity name="CarEntity" representedClassName="CarEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="car_color" optional="YES" attributeType="String"/>
+        <attribute name="car_model" optional="YES" attributeType="String"/>
+        <attribute name="car_name" optional="YES" attributeType="String"/>
+        <attribute name="car_price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="car_vin" optional="YES" attributeType="String"/>
+        <attribute name="car_year" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="User_type_Entity" representedClassName="User_type_Entity" syncable="YES" codeGenerationType="class">
+        <attribute name="user_type_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="user_type_name" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="user_email" attributeType="String"/>
+        <attribute name="user_name" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="user_password" attributeType="String"/>
+        <attribute name="user_type_account" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="user_type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User_type_Entity"/>
+    </entity>
     <elements>
-        <element name="CarEntity" positionX="-63" positionY="-18" width="128" height="43"/>
-        <element name="UserEntity" positionX="-54" positionY="-9" width="128" height="43"/>
+        <element name="CarEntity" positionX="28.05859375" positionY="-218.9921875" width="128" height="133"/>
+        <element name="UserEntity" positionX="375.9921875" positionY="-220.984375" width="128" height="118"/>
+        <element name="User_type_Entity" positionX="207.01953125" positionY="37.9921875" width="128" height="73"/>
     </elements>
 </model>
