@@ -12,7 +12,8 @@ struct Car{
     var vin:String?
     var name:String?
     var model:String?
-    var photo:String?
+    var image:String?
+    var color:String?
     var price:Float?
     var year:Int?
 }

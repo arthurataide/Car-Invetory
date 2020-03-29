@@ -61,6 +61,15 @@ public class DatabaseManager{
                     rowAdded = true
                     
                 }
+                
+                if eName == "UserEntity"{
+                    //TODO: Add code
+                }
+                
+                if eName == "CarEntity"{
+                    //TODO: Add code
+                }
+                
             }
         }
         
@@ -114,6 +123,13 @@ public class DatabaseManager{
                     anyArray.append(model as AnyObject)
                     
                 }
+                if eName == "UserEntity"{
+                    //TODO: Add code
+                }
+                
+                if eName == "CarEntity"{
+                    //TODO: Add code
+                }
             }
         }
         
@@ -161,6 +177,25 @@ public class DatabaseManager{
                     let d = data as! UserType
                     objects[self._selected!].setValue(d.id, forKey: "user_type_id")
                     objects[self._selected!].setValue(d.name, forKey: "user_type_name")
+                }
+                               
+                if eName == "UserEntity"{
+                    let d = data as! User
+                    objects[self._selected!].setValue(d.email, forKey: "user_email")
+                    objects[self._selected!].setValue(d.name, forKey: "user_name")
+                    objects[self._selected!].setValue(d.accountType, forKey: "user_type_account")
+                    objects[self._selected!].setValue(d.password, forKey: "user_password")
+                }
+                
+                if eName == "CarEntity"{
+                    let d = data as! Car
+                    objects[self._selected!].setValue(d.vin, forKey: "car_vin")
+                    objects[self._selected!].setValue(d.name, forKey: "car_name")
+                    objects[self._selected!].setValue(d.color, forKey: "car_account")
+                    objects[self._selected!].setValue(d.model, forKey: "car_model")
+                    objects[self._selected!].setValue(d.price, forKey: "car_price")
+                    objects[self._selected!].setValue(d.year, forKey: "car_year")
+                    objects[self._selected!].setValue(d.image, forKey: "car_image")
                 }
             }
         
