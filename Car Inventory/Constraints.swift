@@ -11,6 +11,7 @@ import Foundation
 struct K {
     
     static let cellIdentifier = "CarsIdentifier"
+    static let cellNibName = "CarsTableViewCell"
     
     struct Segues {
         static let loginUserCars = "LoginUserToTable"

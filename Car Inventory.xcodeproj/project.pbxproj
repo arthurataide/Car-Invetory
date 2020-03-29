@@ -20,6 +20,8 @@
 		19EC4FCE24301F78001AB151 /* UserManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC4FCD24301F78001AB151 /* UserManagerViewController.swift */; };
 		19EC4FD024304F19001AB151 /* CarDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC4FCF24304F19001AB151 /* CarDetailsViewController.swift */; };
 		19EC4FD224305408001AB151 /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC4FD124305408001AB151 /* AddCarViewController.swift */; };
+		19EC4FD52430F4A3001AB151 /* CarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC4FD32430F4A3001AB151 /* CarsTableViewCell.swift */; };
+		19EC4FD62430F4A3001AB151 /* CarsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19EC4FD42430F4A3001AB151 /* CarsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		19EC4FCD24301F78001AB151 /* UserManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagerViewController.swift; sourceTree = "<group>"; };
 		19EC4FCF24304F19001AB151 /* CarDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsViewController.swift; sourceTree = "<group>"; };
 		19EC4FD124305408001AB151 /* AddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
+		19EC4FD32430F4A3001AB151 /* CarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewCell.swift; sourceTree = "<group>"; };
+		19EC4FD42430F4A3001AB151 /* CarsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 			children = (
 				19EC4FB1242FAB5A001AB151 /* Main.storyboard */,
 				19EC4FB9242FAB5C001AB151 /* LaunchScreen.storyboard */,
+				19EC4FD32430F4A3001AB151 /* CarsTableViewCell.swift */,
+				19EC4FD42430F4A3001AB151 /* CarsTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +178,7 @@
 			files = (
 				19EC4FBB242FAB5C001AB151 /* LaunchScreen.storyboard in Resources */,
 				19EC4FB8242FAB5C001AB151 /* Assets.xcassets in Resources */,
+				19EC4FD62430F4A3001AB151 /* CarsTableViewCell.xib in Resources */,
 				19EC4FB3242FAB5A001AB151 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +196,7 @@
 				19EC4FAC242FAB5A001AB151 /* AppDelegate.swift in Sources */,
 				19EC4FCE24301F78001AB151 /* UserManagerViewController.swift in Sources */,
 				19EC4FC8243002CF001AB151 /* LoginViewController.swift in Sources */,
+				19EC4FD52430F4A3001AB151 /* CarsTableViewCell.swift in Sources */,
 				19EC4FAE242FAB5A001AB151 /* SceneDelegate.swift in Sources */,
 				19EC4FD224305408001AB151 /* AddCarViewController.swift in Sources */,
 				19EC4FCA243002F3001AB151 /* CarsViewController.swift in Sources */,

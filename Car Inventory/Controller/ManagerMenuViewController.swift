@@ -14,12 +14,11 @@ class ManagerMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.navigationBar.isHidden = false
         navigationItem.hidesBackButton = true
-        
-        
         title = "Manager Menu"
-        // Do any additional setup after loading the view.
+        
     }
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
          navigationController?.popToRootViewController(animated: true)
