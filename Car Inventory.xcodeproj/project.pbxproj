@@ -22,6 +22,10 @@
 		19EC4FD224305408001AB151 /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC4FD124305408001AB151 /* AddCarViewController.swift */; };
 		19EC4FD52430F4A3001AB151 /* CarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EC4FD32430F4A3001AB151 /* CarsTableViewCell.swift */; };
 		19EC4FD62430F4A3001AB151 /* CarsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19EC4FD42430F4A3001AB151 /* CarsTableViewCell.xib */; };
+		41D52D142431114200C4C928 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D52D102431114200C4C928 /* Car.swift */; };
+		41D52D152431114200C4C928 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D52D112431114200C4C928 /* User.swift */; };
+		41D52D162431114200C4C928 /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D52D122431114200C4C928 /* UserType.swift */; };
+		41D52D19243111AD00C4C928 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D52D18243111AD00C4C928 /* DatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		19EC4FD124305408001AB151 /* AddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
 		19EC4FD32430F4A3001AB151 /* CarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewCell.swift; sourceTree = "<group>"; };
 		19EC4FD42430F4A3001AB151 /* CarsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsTableViewCell.xib; sourceTree = "<group>"; };
+		41D52D102431114200C4C928 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		41D52D112431114200C4C928 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		41D52D122431114200C4C928 /* UserType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
+		41D52D18243111AD00C4C928 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,10 @@
 		19EC4FC2242FB9CF001AB151 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				41D52D102431114200C4C928 /* Car.swift */,
+				41D52D112431114200C4C928 /* User.swift */,
+				41D52D122431114200C4C928 /* UserType.swift */,
+				41D52D18243111AD00C4C928 /* DatabaseManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,8 +202,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41D52D152431114200C4C928 /* User.swift in Sources */,
 				19EC4FB6242FAB5A001AB151 /* Car_Inventory.xcdatamodeld in Sources */,
+				41D52D19243111AD00C4C928 /* DatabaseManager.swift in Sources */,
+				41D52D162431114200C4C928 /* UserType.swift in Sources */,
 				19EC4FC6243001C3001AB151 /* Constraints.swift in Sources */,
+				41D52D142431114200C4C928 /* Car.swift in Sources */,
 				19EC4FD024304F19001AB151 /* CarDetailsViewController.swift in Sources */,
 				19EC4FAC242FAB5A001AB151 /* AppDelegate.swift in Sources */,
 				19EC4FCE24301F78001AB151 /* UserManagerViewController.swift in Sources */,
