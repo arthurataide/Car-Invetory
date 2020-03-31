@@ -20,14 +20,14 @@
             landmarkType = "0">
             <Locations>
                <Location
-                  uuid = "7D6B3DFC-116F-4FB1-9BA8-8B78D178AC4E - 288794c40d5e5fe3"
+                  uuid = "7D6B3DFC-116F-4FB1-9BA8-8B78D178AC4E - 50cbd45a74dc62b8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Car_Inventory.DatabaseManager.deinit"
                   moduleName = "Car Inventory"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user163027/Desktop/Car-Invetory/Car%20Inventory/Model/DatabaseManager.swift"
+                  urlString = "file:///Users/user163027/Desktop/IOS%20Final%20Project/Car-Invetory/Car%20Inventory/Model/DatabaseManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -35,14 +35,14 @@
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
-                  uuid = "7D6B3DFC-116F-4FB1-9BA8-8B78D178AC4E - dd5987f040704d0"
+                  uuid = "7D6B3DFC-116F-4FB1-9BA8-8B78D178AC4E - 7599d8e17d85398b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Car_Inventory.DatabaseManager.__deallocating_deinit"
                   moduleName = "Car Inventory"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user163027/Desktop/Car-Invetory/Car%20Inventory/Model/DatabaseManager.swift"
+                  urlString = "file:///Users/user163027/Desktop/IOS%20Final%20Project/Car-Invetory/Car%20Inventory/Model/DatabaseManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -81,6 +81,22 @@
             startingLineNumber = "17"
             endingLineNumber = "17"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC34E2CE-63F0-4EAF-B464-416ADB0BA846"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Car Inventory/Model/Sample.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "run()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

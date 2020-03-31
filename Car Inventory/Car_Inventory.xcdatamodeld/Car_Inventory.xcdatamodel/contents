@@ -12,18 +12,17 @@
     <entity name="User_type_Entity" representedClassName="User_type_Entity" syncable="YES" codeGenerationType="class">
         <attribute name="user_type_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="user_type_name" optional="YES" attributeType="String"/>
-        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="user_type" inverseEntity="UserEntity"/>
+        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserEntity"/>
     </entity>
     <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
         <attribute name="user_email" attributeType="String"/>
         <attribute name="user_name" attributeType="String"/>
         <attribute name="user_password" attributeType="String"/>
         <attribute name="user_type_account" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="user_type" maxCount="1" deletionRule="Nullify" destinationEntity="User_type_Entity" inverseName="relationship" inverseEntity="User_type_Entity"/>
     </entity>
     <elements>
         <element name="CarEntity" positionX="28.05859375" positionY="-218.9921875" width="128" height="148"/>
         <element name="User_type_Entity" positionX="207.01953125" positionY="37.9921875" width="128" height="88"/>
-        <element name="UserEntity" positionX="375.9921875" positionY="-220.984375" width="128" height="118"/>
+        <element name="UserEntity" positionX="375.9921875" positionY="-220.984375" width="128" height="103"/>
     </elements>
 </model>

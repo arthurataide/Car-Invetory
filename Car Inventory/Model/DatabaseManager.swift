@@ -64,10 +64,27 @@ public class DatabaseManager{
                 
                 if eName == "UserEntity"{
                     //TODO: Add code
+                    let d = data as! User
+                    object.setValue(d.email, forKey: "user_email")
+                    object.setValue(d.name, forKey: "user_name")
+                    object.setValue(d.accountType, forKey: "user_type_account")
+                    object.setValue(d.password, forKey: "user_password")
+                    
+                    rowAdded = true
                 }
                 
                 if eName == "CarEntity"{
                     //TODO: Add code
+                    let d = data as! Car
+                    object.setValue(d.vin, forKey: "car_vin")
+                    object.setValue(d.name, forKey: "car_name")
+                    object.setValue(d.color, forKey: "car_color")
+                    object.setValue(d.model, forKey: "car_model")
+                    object.setValue(d.price, forKey: "car_price")
+                    object.setValue(d.year, forKey: "car_year")
+                    object.setValue(d.image, forKey: "car_image")
+                    
+                    rowAdded = true
                 }
                 
             }
@@ -77,7 +94,7 @@ public class DatabaseManager{
             do{
                 try managedContext?.save()
                 objects.append(object)
-                print("New record added")
+                print("New row added")
             }catch let error as NSError{
                 print("Could not save data. \(error), \(error.userInfo)")
             }
@@ -89,12 +106,7 @@ public class DatabaseManager{
         if entityName != nil && managedContext != nil{
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: self.entityName!)
             do{
-                print("Before: \(objects.count)")
-                objects = []
-                print("After: \(objects.count)")
                 objects = try (managedContext?.fetch(fetchRequest))!
-                print("After fetch: \(objects.count)")
-                //print("rows \(objects)")
             }catch let error as NSError{
                 print("Could not fetch data. \(error), \(error.userInfo)")
             }
@@ -106,38 +118,79 @@ public class DatabaseManager{
         var anyArray:[AnyObject] = []
         
         if let eName = entityName{
-            print(eName)
             
             if eName == "User_type_Entity"{
                 
-                for obj in objects{
-                    var model  = UserType()
+                for object in objects{
+                    var d  = UserType()
                     
-                    if let id = obj.value(forKeyPath: "user_type_id") as? Int{
-                        model.id = id
+                    if let id = object.value(forKeyPath: "user_type_id") as? Int{
+                        d.id = id
                     }
-                    if let name = obj.value(forKeyPath: "user_type_name") as? String{
-                        model.name = name
+                    if let name = object.value(forKeyPath: "user_type_name") as? String{
+                        d.name = name
                     }
                     
-                    anyArray.append(model as AnyObject)
-                    
-                }
-                if eName == "UserEntity"{
-                    //TODO: Add code
-                }
-                
-                if eName == "CarEntity"{
-                    //TODO: Add code
+                    anyArray.append(d as AnyObject)
                 }
             }
-        }
+            
+            if eName == "UserEntity"{
+                for object in objects{
+                    var d = User()
+                    
+                    if let email = object.value(forKeyPath: "user_email") as? String{
+                        d.email = email
+                    }
+                    if let name = object.value(forKeyPath: "user_name") as? String{
+                        d.name = name
+                    }
+                    if let accountType = object.value(forKeyPath: "user_type_account") as? Int{
+                        d.accountType = accountType
+                    }
+                    if let password = object.value(forKeyPath: "user_password") as? String{
+                        d.password = password
+                    }
         
+                    anyArray.append(d as AnyObject)
+                }
+            }
+            if eName == "CarEntity"{
+                //TODO: Add code
+                for object in objects{
+                    var d = Car()
+                    if let vin = object.value(forKeyPath: "car_vin") as? String{
+                        d.vin = vin
+                    }
+                    if let name = object.value(forKeyPath: "car_name") as? String{
+                        d.name = name
+                    }
+                    if let color = object.value(forKeyPath: "car_color") as? String{
+                        d.color = color
+                    }
+                    if let model = object.value(forKeyPath: "car_model") as? String{
+                        d.model = model
+                    }
+                    if let price = object.value(forKeyPath: "car_price") as? Float{
+                        d.price = price
+                    }
+                    if let year = object.value(forKeyPath: "car_year") as? Int{
+                        d.year = year
+                    }
+                    if let image = object.value(forKeyPath: "car_image") as? String{
+                        d.image = image
+                    }
+                    
+                    anyArray.append(d as AnyObject)
+                }
+            }
+            
+        }
         return anyArray
     }
     
     func removeAll(){
-
+        
         fetch()
         do {
             for object in objects {
@@ -167,47 +220,47 @@ public class DatabaseManager{
         }
     }
     
-    func modifyRow(data: AnyObject){
+    
+    func modifyRow(data: AnyObject, index:Int){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
         let managedContext = appDelegate.persistentContainer.viewContext
-
         
-            if let eName = entityName{
-                if eName == "User_type_Entity"{
-                    let d = data as! UserType
-                    objects[self._selected!].setValue(d.id, forKey: "user_type_id")
-                    objects[self._selected!].setValue(d.name, forKey: "user_type_name")
-                }
-                               
-                if eName == "UserEntity"{
-                    let d = data as! User
-                    objects[self._selected!].setValue(d.email, forKey: "user_email")
-                    objects[self._selected!].setValue(d.name, forKey: "user_name")
-                    objects[self._selected!].setValue(d.accountType, forKey: "user_type_account")
-                    objects[self._selected!].setValue(d.password, forKey: "user_password")
-                }
-                
-                if eName == "CarEntity"{
-                    let d = data as! Car
-                    objects[self._selected!].setValue(d.vin, forKey: "car_vin")
-                    objects[self._selected!].setValue(d.name, forKey: "car_name")
-                    objects[self._selected!].setValue(d.color, forKey: "car_account")
-                    objects[self._selected!].setValue(d.model, forKey: "car_model")
-                    objects[self._selected!].setValue(d.price, forKey: "car_price")
-                    objects[self._selected!].setValue(d.year, forKey: "car_year")
-                    objects[self._selected!].setValue(d.image, forKey: "car_image")
-                }
+        
+        if let eName = entityName{
+            if eName == "User_type_Entity"{
+                let d = data as! UserType
+                objects[index].setValue(d.id, forKey: "user_type_id")
+                objects[index].setValue(d.name, forKey: "user_type_name")
             }
+            
+            if eName == "UserEntity"{
+                let d = data as! User
+                objects[index].setValue(d.email, forKey: "user_email")
+                objects[index].setValue(d.name, forKey: "user_name")
+                objects[index].setValue(d.accountType, forKey: "user_type_account")
+                objects[index].setValue(d.password, forKey: "user_password")
+            }
+            
+            if eName == "CarEntity"{
+                let d = data as! Car
+                objects[index].setValue(d.vin, forKey: "car_vin")
+                objects[index].setValue(d.name, forKey: "car_name")
+                objects[index].setValue(d.color, forKey: "car_color")
+                objects[index].setValue(d.model, forKey: "car_model")
+                objects[index].setValue(d.price, forKey: "car_price")
+                objects[index].setValue(d.year, forKey: "car_year")
+                objects[index].setValue(d.image, forKey: "car_image")
+            }
+        }
         
-
-
+        
         do{
             try managedContext.save()
-            print("Record modified")
+            print("Row modified")
         }catch let error as NSError{
             print("Could not save data. \(error), \(error.userInfo)")
         }
-
+        
     }
     
     func selectObject(index: Int){
