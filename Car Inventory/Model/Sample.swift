@@ -19,7 +19,7 @@ class Sample{
         
         //Remove a specific row
         //databaseManager.removeRowByIndex(index: 0)
-
+        
         //Creating object
         var vendorType = UserType()
         vendorType.id = 1
@@ -116,6 +116,80 @@ class Sample{
             print(car)
             print("----")
         }
+    }
+    
+    func insertDummyData(){
+        //Single instance
+        let databaseManager = DatabaseManager.getInstance()
+        //Set entity
+        databaseManager.setEntityName("User_type_Entity")
+        
+        if databaseManager.toList().count == 0{
+            
+            //Creating object
+            var vendorType = UserType()
+            vendorType.id = 1
+            vendorType.name = "Vendor"
+            
+            //Adding row
+            databaseManager.addRow(vendorType as AnyObject)
+            
+            //Creating object
+            var managerType = UserType()
+            managerType.id = 2
+            managerType.name = "Manager"
+            //Adding row
+            databaseManager.addRow(managerType as AnyObject)
+        }
+        
+        //Set entity
+        databaseManager.setEntityName("UserEntity")
+               
+        if databaseManager.toList().count == 0{
+            //Creating user
+            var userVendor = User()
+            userVendor.email = "vendor@car.com"
+            userVendor.name = "John Smith"
+            userVendor.password = "1234"
+            userVendor.accountType = 1
+            //Adding row
+            databaseManager.addRow(userVendor as AnyObject)
+            
+            //Creating user
+            var managerVendor = User()
+            managerVendor.email = "manager@car.com"
+            managerVendor.name = "Peter Park"
+            managerVendor.password = "1234"
+            managerVendor.accountType = 2
+            //Adding row
+            databaseManager.addRow(managerVendor as AnyObject)
+        }
+        
+        //Change entity
+        databaseManager.setEntityName("CarEntity")
+        databaseManager.removeAll()
+        if databaseManager.toList().count == 0{
+            var car1 = Car()
+            car1.name = "Brand New Honda Civic"
+            car1.vin = "SJDU5D895FF"
+            car1.model = "Honda Civic"
+            car1.year = 2020
+            car1.image = "honda_civic_photo"
+            car1.price = 20000
+            car1.color = "Blue"
+            databaseManager.addRow(car1 as AnyObject)
+            
+            var car2 = Car()
+            car2.name = "Used Toyota Corolla"
+            car2.vin = "5DFG4SJDU5D8"
+            car2.model = "Toyota Corolla"
+            car2.year = 2010
+            car2.image = "toyota_corolla_photo"
+            car2.price = 10000
+            car2.color = "White"
+            databaseManager.addRow(car2 as AnyObject)
+        }
+        
     }
     
 }

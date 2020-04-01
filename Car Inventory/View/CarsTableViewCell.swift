@@ -11,11 +11,20 @@ import UIKit
 class CarsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var carCustomCells: UIView!
+    
+    @IBOutlet weak var carNameLabel: UILabel!
+    @IBOutlet weak var modelLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var carImageView: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+   
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state

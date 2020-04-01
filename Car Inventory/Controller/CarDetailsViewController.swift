@@ -20,6 +20,7 @@ class CarDetailsViewController: UIViewController {
     @IBOutlet weak var deleteBtn: UIButton!
     
     var segueName: String?
+    var car:Car?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,15 @@ class CarDetailsViewController: UIViewController {
             deleteBtn.isHidden = true
         }
         // Do any additional setup after loading the view.
+        //print(car!)
+        carNameLabel.text = car?.name
+        vinLabel.text  = car?.vin
+        carImageView.image = UIImage(named: car?.image ?? "no_photo")
+        modelLabel.text = car?.model
+        yearLabel.text = String(car?.year ?? 0)
+        colorLabel.text = car?.color
+        priceLabel.text = String(format: "$%.02f", car?.price ?? 0.0)
+        
     }
     
     @IBAction func deleteBtnPressed(_ sender: UIButton) {
