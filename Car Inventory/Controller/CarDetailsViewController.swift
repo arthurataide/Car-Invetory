@@ -28,8 +28,7 @@ class CarDetailsViewController: UIViewController {
         if segueName != K.Segues.menuToCarsAdministration {
             deleteBtn.isHidden = true
         }
-        // Do any additional setup after loading the view.
-        //print(car!)
+
         carNameLabel.text = car?.name
         vinLabel.text  = car?.vin
         carImageView.image = UIImage(named: car?.image ?? "no_photo")

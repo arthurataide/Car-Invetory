@@ -11,13 +11,14 @@ import UIKit
 class ManagerMenuViewController: UIViewController {
 
     @IBOutlet weak var userNameLabel: UILabel!
-    
+    var user:User?
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.isHidden = false
         navigationItem.hidesBackButton = true
         title = "Manager Menu"
+        userNameLabel.text = user?.name
         
     }
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
@@ -38,6 +39,5 @@ class ManagerMenuViewController: UIViewController {
             destinationVC.segueName = segue.identifier
         }
     }
-    
     
 }

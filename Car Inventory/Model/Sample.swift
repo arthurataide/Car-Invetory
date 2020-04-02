@@ -167,7 +167,7 @@ class Sample{
         
         //Change entity
         databaseManager.setEntityName("CarEntity")
-        databaseManager.removeAll()
+        //databaseManager.removeAll()
         if databaseManager.toList().count == 0{
             var car1 = Car()
             car1.name = "Brand New Honda Civic"

@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    var user:User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class LoginViewController: UIViewController {
         let email = emailTextField.text
         let password = passwordTextField.text
         var loginOk = false
-        var user:User?
+        
         
         for userObject in databaseManager.toList(){
             user = userObject as? User
@@ -74,6 +75,17 @@ class LoginViewController: UIViewController {
         let alert = UIAlertController(title: "Authentication", message: "Wrong email or password", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .default))
         self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let segueName = segue.identifier
+        
+        if segueName == K.Segues.loginManagerPage{
+           let destinationVC = segue.destination as! ManagerMenuViewController
+           destinationVC.user = user
+        }
         
     }
     
