@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         /*Inserting dummy data for testing*/
         let sample = Sample()
         sample.insertDummyData()

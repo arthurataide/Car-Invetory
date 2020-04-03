@@ -26,7 +26,7 @@ class UserManagerViewController: UIViewController {
 
     @IBAction func saveBtnPressed(_ sender: UIButton) {
         
-        var checkMessage = checkRequiredFields()
+        let checkMessage = checkRequiredFields()
         
         if checkMessage == "" {
         //Set entity
