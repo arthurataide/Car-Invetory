@@ -29,8 +29,8 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SD1-It-WFw">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="93"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="Uj4-Gr-yJa"/>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="93" id="dLh-bQ-amq"/>
+                                                    <constraint firstAttribute="width" constant="100" id="Uj4-Gr-yJa"/>
+                                                    <constraint firstAttribute="height" constant="93" id="dLh-bQ-amq"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
@@ -73,7 +73,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="DBu-d2-PsI" secondAttribute="trailing" id="cde-pF-8cz"/>
-                    <constraint firstAttribute="bottom" secondItem="DBu-d2-PsI" secondAttribute="bottom" id="dLm-IR-qDw"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DBu-d2-PsI" secondAttribute="bottom" id="dLm-IR-qDw"/>
                     <constraint firstItem="DBu-d2-PsI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lVg-at-Ons"/>
                     <constraint firstItem="DBu-d2-PsI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nKi-2W-b96"/>
                 </constraints>
