@@ -17,9 +17,9 @@ class CarsTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var carImageView: UIImageView!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
     

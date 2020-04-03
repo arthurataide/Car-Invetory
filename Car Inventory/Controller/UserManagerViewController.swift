@@ -26,7 +26,7 @@ class UserManagerViewController: UIViewController {
 
     @IBAction func saveBtnPressed(_ sender: UIButton) {
         
-        var checkMessage = checkRequiredFields()
+        let checkMessage = checkRequiredFields()
         
         if checkMessage == "" {
         //Set entity
@@ -78,7 +78,7 @@ class UserManagerViewController: UIViewController {
         if confirmPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {message = "Complete all required fields"}
         if passwordTextField.text != confirmPasswordTextField.text {message = "Password fields are not matching"}
         if !emailTextField.text!.contains("@") || !emailTextField.text!.contains(".") {message = "Email does not have a valid format"}
-        print(emailTextField.text)
+        //print(emailTextField.text)
         return message
     }
     
